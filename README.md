@@ -6,4 +6,6 @@ Mulesoft repository contains two file.
        sample.java : which contains the java code for database connectivity
        mulsoft.iml
 
-Note: I used intellij IDEA community to write this java code. In order for database connnectivity, I used the JDBC connector. 
+Note: I used intellij IDEA community to write this java code. In order for database connnectivity, I used the JDBC connector. I ahd install JDBC connector plugin in intellij IDEA.
+
+I did try REST API integration, but couldn't finish it.
