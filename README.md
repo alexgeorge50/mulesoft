@@ -9,4 +9,6 @@ They are:
 
 Note: I used intellij IDEA community to write this java code. In order for database connnectivity, I used the JDBC connector. I ahd install JDBC connector plugin in intellij IDEA.
 
-I did try REST API integration, but couldn't finish it.
+This repository contains the a folder named src and pom.xml. This src folder contains the file which include the restful api implementation. pom.xml file contains the dependencies for the src folder.
+THe database lnked to the src folder is demo.sql file.
+
