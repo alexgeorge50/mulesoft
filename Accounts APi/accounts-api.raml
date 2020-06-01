@@ -1,0 +1,68 @@
+#%RAML 1.0
+title: Accounts API
+
+types:
+  Account: !include dataTypes/Account.raml
+
+/accounts:
+  get:
+    headers:
+      Requester-ID:
+        displayName: Requester ID
+        description: id of the person requesting the accounts information
+        type: string
+        required: true
+    queryParameters:
+      type:
+        required: true
+        enum:
+          - "Personal"
+          - "Business"
+      name:
+        required: false
+      country:
+        required: false
+    responses:
+      200:
+        description: Retreives list of all accounts
+        body:
+          application/json:
+            type: Account[]
+            examples:
+              output: !include examples/accountExample.raml
+      400:
+        description: Error
+        body:
+          application/json:
+            example:
+              message: Error in retreiving the list of records
+  post:
+    description: Create an account
+    headers:
+      Requester-ID:
+        displayName: Requester ID
+        description: id of the person requesting the accounts information
+        type: string
+        required: true
+    body:
+      application/json:
+        type: Account[]
+        examples:
+          output: !include examples/accountExampleNoID.raml
+    responses:
+      200:
+        description: Success
+        body:
+          application/json:
+            example:
+              message: Account created(but not really)
+      400:
+        description: Error
+        body:
+          application/json:
+            example:
+              message: error in creating an account
+
+        
+
+          
